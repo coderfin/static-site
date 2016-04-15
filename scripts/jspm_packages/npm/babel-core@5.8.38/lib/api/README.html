@@ -1,0 +1,10 @@
+<h2>API</h2><p>In this directory you&#39;ll find all the public interfaces to using Babel for both
+node and the browser.</p>
+<h3>Node</h3><p>There are two ways people use Babel within Node, they either are manipulating
+strings of code with <code>babel.transform</code> or <code>babel.parse</code>, they also might be
+running their code through Babel before execution via <code>register</code> or <code>polyfill</code>.</p>
+<h3>Browser</h3><p>Usage of Babel in the browser is extremely uncommon and in most cases
+considered A Bad Idea™. However it works by loading <code>&lt;script&gt;</code>&#39;s with XHR,
+transforming them and then executing them. These <code>&lt;script&gt;</code>&#39;s need to have a
+<code>type</code> of &quot;text/ecmascript-6&quot;, &quot;text/babel&quot;, or &quot;module&quot; (&quot;text/6to5&quot; exists as
+well for legacy reasons).</p>
