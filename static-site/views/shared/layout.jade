@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+block vars
+head
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    meta(charset="UTF-8")
+    title #{title}
+    block head
+body
+    main
+        block main
+    include partials/layout/scripts
+    block scripts

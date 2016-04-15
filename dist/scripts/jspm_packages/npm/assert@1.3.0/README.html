@@ -1,0 +1,29 @@
+<h1>assert</h1><p><a href="https://travis-ci.org/defunctzombie/commonjs-assert"><img src="https://travis-ci.org/defunctzombie/commonjs-assert.svg?branch=master" alt="Build Status"></a></p>
+<p>This module is used for writing unit tests for your applications, you can access it with require(&#39;assert&#39;).</p>
+<p>The API is derived from the <a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.0">commonjs 1.0 unit testing</a> spec and the <a href="http://nodejs.org/api/assert.html">node.js assert module</a></p>
+<h2>assert.fail(actual, expected, message, operator)</h2><p>Throws an exception that displays the values for actual and expected separated by the provided operator.</p>
+<h2>assert(value, message), assert.ok(value, [message])</h2><p>Tests if value is truthy, it is equivalent to assert.equal(true, !!value, message);</p>
+<h2>assert.equal(actual, expected, [message])</h2><p>Tests shallow, coercive equality with the equal comparison operator ( == ).</p>
+<h2>assert.notEqual(actual, expected, [message])</h2><p>Tests shallow, coercive non-equality with the not equal comparison operator ( != ).</p>
+<h2>assert.deepEqual(actual, expected, [message])</h2><p>Tests for deep equality.</p>
+<h2>assert.notDeepEqual(actual, expected, [message])</h2><p>Tests for any deep inequality.</p>
+<h2>assert.strictEqual(actual, expected, [message])</h2><p>Tests strict equality, as determined by the strict equality operator ( === )</p>
+<h2>assert.notStrictEqual(actual, expected, [message])</h2><p>Tests strict non-equality, as determined by the strict not equal operator ( !== )</p>
+<h2>assert.throws(block, [error], [message])</h2><p>Expects block to throw an error. error can be constructor, regexp or validation function.</p>
+<p>Validate instanceof using constructor:</p>
+<pre><code class="language-javascript">assert.throws(function() { throw new Error(&quot;Wrong value&quot;); }, Error);
+</code></pre>
+<p>Validate error message using RegExp:</p>
+<pre><code class="language-javascript">assert.throws(function() { throw new Error(&quot;Wrong value&quot;); }, /value/);
+</code></pre>
+<p>Custom error validation:</p>
+<pre><code class="language-javascript">assert.throws(function() {
+    throw new Error(&quot;Wrong value&quot;);
+}, function(err) {
+    if ( (err instanceof Error) &amp;&amp; /value/.test(err) ) {
+        return true;
+    }
+}, &quot;unexpected error&quot;);
+</code></pre>
+<h2>assert.doesNotThrow(block, [message])</h2><p>Expects block not to throw an error, see assert.throws for details.</p>
+<h2>assert.ifError(value)</h2><p>Tests if value is not a false value, throws if it is a true value. Useful when testing the first argument, error in callbacks.</p>

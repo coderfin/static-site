@@ -1,0 +1,15 @@
+extends views/shared/layout
+
+block vars
+    -var title = "Home"
+
+block head
+    link(rel="stylesheet", href="styles/views/index.css")
+
+block main
+    h1 Hello, World
+    p The current time is: #[span#time]
+    
+block scripts
+    script.
+        System.import("scripts/views/index")

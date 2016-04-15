@@ -1,0 +1,34 @@
+{
+  "name": "static-site",
+  "version": "0.1.0",
+  "description": "> This repository demonstrates an example of how to create a static site that can be hosted on GitHub using [GitHub Pages](http://pages.github.com).  As we know there are many ways to skin a cat.  This is just one of them.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderfin/static-site.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/coderfin/static-site/issues"
+  },
+  "homepage": "https://github.com/coderfin/static-site#readme",
+  "private": true,
+  "devDependencies": {
+    "harp": "^0.20.3",
+    "jspm": "^0.16.33"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "static-site",
+      "packages": "static-site/scripts/jspm_packages"
+    },
+    "configFile": "static-site/scripts/config.js",
+    "dependencies": {
+      "moment": "npm:moment@^2.12.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
