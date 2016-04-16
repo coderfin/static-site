@@ -31,7 +31,7 @@
 1. Add desired styles, templates, scripts, and other files as desired
 1. `node_modules/.bin/harp compile example-repo dist`
 1. Add a *.gitignore* file
-    - include *node_modules* and *example-repo/**/jspm_packages* but **do not include** any files in *dist*
+    - include *node_modules* and *example-repo/\*\*/jspm_packages* but **do not include** any files in *dist*
 
 ####GitHub
 1. Commit and push everything
